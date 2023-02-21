@@ -9,7 +9,7 @@ import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <Canvas
-    // dpr={[1, 2]}
+    dpr={[1, 2]}
     gl={{
       antialias: false,
       toneMapping: THREE.ACESFilmicToneMapping,
