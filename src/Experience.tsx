@@ -4,6 +4,7 @@ import { Mesh, Vector3 } from "three"
 import { Stats, OrbitControls, TransformControls, PivotControls, Html, Text, Float, MeshReflectorMaterial } from '@react-three/drei'
 import CustomObject from "./CustomObject"
 import * as THREE from 'three'
+import { useControls } from 'leva'
 
 const App = () => {
   const cubeRef = useRef<Mesh>(null!)
@@ -18,6 +19,8 @@ const App = () => {
     // state.camera.position.z = Math.cos(state.clock.elapsedTime) * 10
     // state.camera.lookAt(0, 0, 0)
   })
+  const control = useControls({ position: -2 })
+  console.log(control.position)
   return (
     <>
       <Stats />
